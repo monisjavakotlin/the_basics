@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:the_basics/widgets/call_to_action/call_to_action.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+import 'package:the_basics/views/home/home_content_Mobile.dart';
+import 'package:the_basics/views/home/home_content_desktop.dart';
 import 'package:the_basics/widgets/centered_view/centered_view.dart';
-import 'package:the_basics/widgets/course_details/course_details.dart';
 import 'package:the_basics/widgets/navigation_bar/navigation_bar.dart';
 
 class HomeView extends StatelessWidget {
@@ -16,15 +17,9 @@ class HomeView extends StatelessWidget {
           children: <Widget>[
             NavigationBar(),
             Expanded(
-              child: Row(
-                children: <Widget>[
-                  CourseDetails(),
-                  Expanded(
-                    child: Center(
-                      child: CallToAction('Join Course'),
-                    ),
-                  )
-                ],
+              child: ScreenTypeLayout(
+                mobile: HomeContentMobile(),
+                desktop: HomeContentDesktop(),
               ),
             )
           ],
