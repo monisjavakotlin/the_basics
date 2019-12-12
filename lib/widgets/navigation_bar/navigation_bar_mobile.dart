@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'navbar_logo.dart';
 
-class NavigationBarMobile extends StatelessWidget {
+class NavigationBarMobile extends StatefulWidget {
+  @override
+  _NavigationBarMobileState createState() => _NavigationBarMobileState();
+}
+
+class _NavigationBarMobileState extends State<NavigationBarMobile> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,7 +18,9 @@ class NavigationBarMobile extends StatelessWidget {
         children: <Widget>[
           IconButton(
             icon: Icon(Icons.menu),
-            onPressed: () {},
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
           ),
           NavBarLogo()
         ],
