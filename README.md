@@ -1,6 +1,6 @@
 # the_basics
 
-A new Flutter project.
+A new Flutter project for Mobil and Tablet and Desktop.
 
 ## Getting Started
 
